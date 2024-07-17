@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PH Archive</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+</head>
+<body>
+    <h1>PH Newspaper Archive</h1>
+    <img src="{{ url_for('static', filename='images/pngwing.com.png') }}" alt="" class="center" style="display: block; margin: 0 auto;">
+    <form action="/search" method="post">
+        <div class="form-group">
+            <input type="date" id="chosen_date" name="chosen_date">
+        </div>
+        <input type="text" id="keyword" name="keyword" placeholder="Search Keyword">
+        <button class="btn-search" type="submit"></button>
+        <div class="details">
+            <body>
+                "This project daily scrapes the headlines of eight newspaper websites: Philippine Star, Tribune, Inquirer, Malaya, Manila Times, Manila Bulletin, Business World, and Rappler. It uses three python webscraping frameworks: BeautifulSoup, Scrapy, and Selenium to adapt to the news website's structure. For example, Selenium is used to cater for a website that mainly uses JavaScript like the Manila Bulletin. MySQL is used as primary Database Management System but the data is extracted to CSV for the project to be uploaded on PythonAnywhere using Flask for free. Twitter-roBERTa-base, a transformers model, from HuggingFace is used for Sentiment Analysis."
+            </body>
+
+        </div>
+    </form>
+</body>
+</html>

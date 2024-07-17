@@ -1,0 +1,66 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.item {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.toggle {
+    display: none;
+}
+
+.title {
+    background-color: rgb(224, 224, 224);
+    color: black;
+    padding: 15px;
+    cursor: pointer;
+    font-size: 18px;
+    font-family: 'Courier New';
+    font-weight: bold;
+    display: block;
+    user-select: none;
+}
+
+.details {
+    display: none;
+    padding: 15px;
+}
+
+.toggle:checked + .title + .details {
+    display: block;
+}
+
+.details div {
+    margin-bottom: 10px;
+}
+
+.link a {
+    color: #007BFF;
+    text-decoration: none;
+}
+
+.link a:hover {
+    text-decoration: underline;
+}
+
+div.article{
+    line-height: 1.8;
+}
+
+div.sentiment{
+    font-family: 'Helvetica';
+}

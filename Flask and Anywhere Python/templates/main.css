@@ -1,0 +1,42 @@
+h1{
+    text-align: center;
+    transform: translateY(250px);
+    font-family: 'Courier New';
+}
+
+body{
+    background-color: rgb(224, 224, 224);
+}
+
+img.center{
+    width: 200px;
+    height: 200px;
+    
+}
+
+form{
+    text-align: center;
+    font-size: 30px;
+    margin-top: 400px;
+}
+
+input{
+    border: #cccccc 1px solid;
+    background-color: rgb(240, 240, 240);
+    font-size: 20px;
+    width: 500px;
+    height: 50px;
+    font-family: 'Helvetica';
+    transform: translateY(-350px);
+}
+
+.btn-search{
+    background-image: url('magnifier-green.png');
+    width: 30px;
+    height: 30px;
+    transform: translateX(-45px) translateY(-343px);
+    background-size: 2.4em;
+    background-color: transparent;
+    border: 0;
+    cursor: pointer;
+}

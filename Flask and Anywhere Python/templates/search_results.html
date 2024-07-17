@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Results</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/searchstyle.css') }}">
+</head>
+<body>
+    <h1>Search Results</h1>
+    <a href="/"><button>Back to Home</button></a>
+    {% if results %}
+        <div class="container">
+        {% for result in results %}
+            <div class="item">
+            <div class="sentiment">Article Has {{ result['label'] }} Sentiment</div>
+                <input type="checkbox" id="item-{{ loop.index }}" class="toggle">
+                <label class="title" for="item-{{ loop.index }}">{{ result['title'] }}</label>
+                <div class="details">
+                    <div class="author"><strong>Author:</strong> {{ result['author'] }}</div>
+                    <div class="date"><strong>Date:</strong> {{ result['date'] }}</div>
+                    <div class="article"><strong>Article:</strong> {{ result['article'] }}</div>
+                    <div class="link"><strong>Link:</strong> <a href="{{ result['link'] }}">{{ result['link'] }}</a></div>
+                </div>
+            </div>
+            <hr>
+        {% endfor %}
+        </div>
+    {% else %}
+        <p>No results found.</p>
+    {% endif %}
+</body>
+</html>
